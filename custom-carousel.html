@@ -1,18 +1,26 @@
 <link rel="import" href="custom-product.html">
 <template>
 	<style> @import "./custom-carousel.css"; </style>
+	<div class="header-carousel">
+		<span style="position: relative; width: 23%; display: block;">Você visitou</span>
+<!-- 		<span style="position: relative; width: 77%; display: block;">e gostou</span> -->
+	</div>
 	<div class="wrap">
-		<div style="z-index: 10; position: absolute; width: inherit;">
-			<div id="test" style="float: left; width: 130px; background-color: white;">
+
+		<div style="z-index: 10; position: absolute; border-right: 1.6px solid #f0f0f0;">
+			<div id="reference" style="float: left; width: 170px; background-color: white;">
 			</div>
-			<div class="arrow-left"></div>
-			<div class="arrow-right"></div>
+			<div class="wrap-arrowleft">
+				<div class="arrow-smaller"></div>
+				<div class="arrow-left"></div>
+			</div>
 		</div>
+			<div class="arrow-right"></div>
 			<ul class="carousel trans"></ul>
 	</div>
 </template>
 <script>
-	 (function(window, document){
+	 (function(document){
 	 	//the outer doc
 		const thatDoc = document;
 	    
@@ -37,10 +45,10 @@
 
 	    	_arrowRight(){
 	    		this.ul.classList.remove('carousel-reverse');
+				this.ul.classList.add('carousel');
 				this.lis.forEach( (li) => {
 					li.style.order = li.style.order == 0 ? this.lis.length - 1 : Number(li.style.order) - 1;
 				});
-				this.ul.classList.add('carousel');
 				this.ul.classList.remove('trans');
 				setTimeout(() => this.ul.classList.add('trans'), 50);
 	    	}
@@ -52,14 +60,14 @@
 				});
 				this.ul.classList.add('carousel-reverse');
 				this.ul.classList.remove('trans');
-				setTimeout(() => this.ul.classList.add('trans'), 50);
+				setTimeout(() => this.ul.classList.add('trans'), 20);
 	    	}
 
 	    	setReference(product){
 	    		const productRef = document.createElement('custom-product');
 	    		productRef.setProductInfo(product);
 
-	    		this.shadowRoot.querySelector("#test").appendChild(productRef);
+	    		this.shadowRoot.querySelector("#reference").appendChild(productRef);
 	    	}
 
 	    	populateCarousel(products){
@@ -81,5 +89,5 @@
 
 	    }
 	    document.registerElement('custom-carousel', CustomCarousel);
-	 })(window, document);
+	 })(document);
 </script>

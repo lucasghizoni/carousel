@@ -1,14 +1,16 @@
 <html>
-	<head> 
+	<head>
+		<script type="text/javascript" src="/node_modules/webcomponentsjs/full.js"></script>
 		<link rel="import" href="custom-carousel.html">
 	</head>
 	<body>
 		<custom-carousel></custom-carousel>
 	</body>
 	<script>
+
 		let scriptRequestor = document.createElement('script');
 		
-		scriptRequestor.src = "put your URL here";
+		scriptRequestor.src = "http://roberval.chaordicsystems.com/challenge/challenge.json";
 		document.head.appendChild(scriptRequestor);
 
 		//callback of requestorScript
