@@ -1,0 +1,21 @@
+<html>
+	<head> 
+		<link rel="import" href="custom-carousel.html">
+	</head>
+	<body>
+		<custom-carousel></custom-carousel>
+	</body>
+	<script>
+		let scriptRequestor = document.createElement('script');
+		
+		scriptRequestor.src = "put your URL here";
+		document.head.appendChild(scriptRequestor);
+
+		//callback of requestorScript
+		function X(response){
+			const carouselElm = document.querySelector('custom-carousel');
+			carouselElm.setReference(response.data.reference.item);
+			carouselElm.populateCarousel(response.data.recommendation);
+		}
+</script>
+</html>

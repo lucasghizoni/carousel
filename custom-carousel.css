@@ -1,0 +1,50 @@
+.wrap{
+  overflow: hidden;
+  width: 400px;
+}
+
+.carousel{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform: translateX(33.33333%);
+}
+
+.carousel-reverse{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-33.33333%);
+}
+
+.trans {
+    transform: none;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-item{
+  flex: 1 0 100%;
+  flex-basis: 100px;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-right: 14px solid blue;
+    float: left;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 14px solid blue;
+    float: right;
+}

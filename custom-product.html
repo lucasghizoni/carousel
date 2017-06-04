@@ -1,0 +1,42 @@
+<template>
+    <style> @import "./custom-product.css"; </style>
+    <div>
+    	<img>
+    	<strong id="description" class="texts" >
+    	</strong><br>
+    	<strong id="price" class="texts">Por: </strong>
+    </div>
+</template>
+<script>
+	(function(window, document){
+		const thatDoc = document;
+
+	    const thisDoc =  (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+	    const template = thisDoc.querySelector('template').content;
+
+		class CustomProduct extends HTMLElement {
+			
+			createdCallback(){
+    			const shadowRoot = this.createShadowRoot();
+		        const clone = thatDoc.importNode(template, true);
+		        shadowRoot.appendChild(clone);
+			}
+
+			setProductInfo(product){
+				//this may be useful. store the object from server
+				this.productData = product;
+				
+				const img = this.shadowRoot.querySelector('img');
+				img.src = product.imageName;
+
+				const desc = this.shadowRoot.querySelector('#description');
+				desc.textContent = product.name;
+
+				const priceElm = this.shadowRoot.querySelector('#price');
+				priceElm.textContent += product.price;
+			}
+		}
+
+		document.registerElement('custom-product', CustomProduct);
+	})(window, document);
+</script>
