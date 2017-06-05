@@ -17,7 +17,7 @@
     left: -40.5%;
 }
 
-.carousel-forward{
+.carousel-forward {
     transform: translateX(33.33333%);
 }
 
@@ -76,6 +76,8 @@
 .header-carousel > span:first-child {
     width: 23%;
 }
+
+/*CSS arrows*/
 
 .arrow-left-cont {
     position: relative;
