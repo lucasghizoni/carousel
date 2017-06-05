@@ -44,6 +44,9 @@ strong {
     margin-right: auto;
 }
 
+.price-container {
+	padding-top: 15px;
+}
 
 .price {
 	color: #cc152c;
@@ -57,6 +60,7 @@ strong {
 	font-size: 10px;
 	color: #cc152c;
 }
+
 .description {
 	padding-top: 8px;
 	overflow: hidden;
