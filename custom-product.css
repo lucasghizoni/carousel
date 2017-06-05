@@ -53,7 +53,7 @@ strong {
 }
 
 .conditions {
-	font-size: 13px;
+	font-size: 10px;
 	color: #cc152c;
 }
 .description {
@@ -62,12 +62,13 @@ strong {
 	text-overflow: ellipsis;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
+	font-size: 10px;
 }
 
 span {
 	letter-spacing: 0.4px;
 	display: -webkit-box;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: normal;
 	width: 80%;
 	margin-left: auto;

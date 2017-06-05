@@ -1,14 +1,12 @@
 <html>
 	<head>
-		<script type="text/javascript" src="/node_modules/webcomponentsjs/full.js"></script>
 		<link rel="import" href="custom-carousel.html">
 	</head>
 	<body>
 		<custom-carousel></custom-carousel>
 	</body>
 	<script>
-
-		let scriptRequestor = document.createElement('script');
+		const scriptRequestor = document.createElement('script');
 		
 		scriptRequestor.src = "http://roberval.chaordicsystems.com/challenge/challenge.json";
 		document.head.appendChild(scriptRequestor);
@@ -19,5 +17,5 @@
 			carouselElm.setReference(response.data.reference.item);
 			carouselElm.populateCarousel(response.data.recommendation);
 		}
-</script>
+	</script>
 </html>
