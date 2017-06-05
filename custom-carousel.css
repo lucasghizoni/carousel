@@ -97,7 +97,7 @@
     float: left;
     border-top: 16px solid transparent;
     border-bottom: 16px solid transparent;
-    border-right: 20px solid blue;
+    border-right: 20px solid #156c9a;
     cursor: pointer;
 }
 
@@ -128,7 +128,7 @@
     height: 0;
     border-top: 16px solid transparent;
     border-bottom: 16px solid transparent;
-    border-left: 20px solid blue;
+    border-left: 20px solid #156c9a;
     left: 51px;
     position: relative;
     cursor: pointer;
