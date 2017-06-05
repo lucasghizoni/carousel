@@ -14,16 +14,14 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    transform: translateX(33.33333%);
     left: -40%;
 }
 
+.carousel-forward{
+    transform: translateX(33.33333%);
+}
+
 .carousel-reverse {
-    position: relative;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     transform: translateX(-33.33333%);
 }
 
@@ -55,7 +53,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
 }
 
-.header-carousel span{
+.header-carousel span {
     font-family: sans-serif;
     font-size: 18px;
     left: 1%;
@@ -64,12 +62,6 @@
     display: inline-block;
     color: #156c9a;
     font-weight: bold;
-}
-
-.wrap-arrowleft {
-    position: relative;
-    float: left;
-    display: inline;
 }
 
 .arrow-left {
@@ -116,7 +108,7 @@
     border-left: 20px solid grey;
 }
 
-.arrow-right-cont{
+.arrow-right-cont {
     position: relative;
     height: 100%;
     width: 80px;

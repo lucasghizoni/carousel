@@ -30,7 +30,7 @@
 			this.lis.forEach( (li) => {
 				li.style.order = li.style.order == 0 ? this.lis.length - 1 : Number(li.style.order) - 1;
 			});
-			this.ul.classList.add('carousel');
+			this.ul.classList.add('carousel-forward');
 			this.ul.classList.remove('trans');
 			setTimeout(() => this.ul.classList.add('trans'), 50);
 
@@ -44,7 +44,7 @@
 		_arrowLeft(){
 			this.arrowRight.classList.remove('arrow-right-disabled');
 
-			this.ul.classList.remove('carousel');
+			this.ul.classList.remove('carousel-forward');
 			this.lis.forEach( (li) => {
 			li.style.order = li.style.order == this.lis.length - 1 ? 0 : Number(li.style.order) + 1;
 			});
