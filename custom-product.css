@@ -1,8 +1,8 @@
 a {
+	text-decoration: none !important;
 	display: block;
 	position: relative;
 	width: 168px;
-	text-decoration: none !important;
 	color: inherit;
 	padding-top: 4px;
 }
